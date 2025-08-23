@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="app-title">Multiple Timers App</h1>
+        
+        <!-- Timer Input Section -->
+        <div class="timer-input-section">
+            <div class="set-time-label">Set Time</div>
+            
+            <div class="time-input-container">
+                <div>
+                    <input type="number" class="time-input" id="hours" min="0" max="23" value="0" placeholder="00">
+                    <div class="time-label">hh</div>
+                </div>
+                <span class="time-separator">:</span>
+                <div>
+                    <input type="number" class="time-input" id="minutes" min="0" max="59" value="0" placeholder="00">
+                    <div class="time-label">mm</div>
+                </div>
+                <span class="time-separator">:</span>
+                <div>
+                    <input type="number" class="time-input" id="seconds" min="0" max="59" value="0" placeholder="00">
+                    <div class="time-label">ss</div>
+                </div>
+            </div>
+            
+            <button class="start-button" onclick="startNewTimer()">Start New Timer</button>
+            
+            <div style="margin-top: 20px;">
+                <div class="current-timers-label">Current Timers</div>
+                <div class="no-timers-message" id="noTimersMessage">You have no timers currently</div>
+            </div>
+        </div>
+        
+        <!-- Active Timers Display Section -->
+        <div class="timers-container" id="timersContainer">
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
